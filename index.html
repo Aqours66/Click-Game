@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mining Clicker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="upgrade-container">
+        <h2>Upgrade System</h2>
+        <div class="upgrade-option" onclick="buyUpgrade('increasePower')">
+            <p>Upgrade Click Power <br> Cost: <span id="increasePowerCost">5</span></p>
+        </div>
+        <div class="upgrade-option" onclick="buyUpgrade('decreaseCost')">
+            <p>Decrease Upgrade Cost <br> Cost: <span id="decreaseCostCost">10</span></p>
+        </div>
+        <div class="upgrade-option" onclick="buyUpgrade('increaseLevel')">
+            <p>Unlock New Level <br> Cost: <span id="increaseLevelCost">15</span></p>
+        </div>
+        <div class="upgrade-option" onclick="buyUpgrade('doubleScore')">
+            <p>Double Score Rate <br> Cost: <span id="doubleScoreCost">20</span></p>
+        </div>
+        <div class="upgrade-option" onclick="buyUpgrade('extraPower')">
+            <p>Extra Power Boost <br> Cost: <span id="extraPowerCost">25</span></p>
+        </div>
+    </div>
+
+    <div class="settings-container">
+        <label>
+            <input type="checkbox" id="toggleSoundEffects" checked> Sound Effects
+        </label>
+    </div>
+
+    <div class="game-container">
+        <div class="mining-container">
+            <div class="click-space" onclick="handleClick()">Mine!</div>
+        </div>
+        <div id="clickPower">Click Power: <span id="clickPowerValue">2</span></div>
+        <div class="info-container">
+            <div id="score">Score: <span id="scoreValue">0</span></div>
+            <div id="level">Level: <span id="levelValue">1</span></div>
+        </div>
+    </div>
+
+
+
+    <div class="overlay">
+        <div class="overlay-content">
+            <h2>Welcome to Mining Clicker!</h2>
+            <p>Click the "Mine!" button to collect scores and unlock upgrades. Upgrade your abilities to become more powerful and reach higher levels.</p>
+            <p>Have fun mining!</p>
+        </div>
+    </div>
+
+    <audio id="clickSound" src="Click.wav"></audio>
+    <audio id="upgradeSound" src="Upgrade.mp3"></audio>
+    <audio id="levelUpSound" src="Level-Up.mp3"></audio>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
